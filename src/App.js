@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import  React, {useState} from 'react';
+import Header from './components/Header';
+import Input from './components/Input';
+import Button from './components/Button';
 import './App.css';
 
 function App() {
+
+  const INITIAL_STATE = { array : '' };
+
+  const [values, setValues] = useState(INITIAL_STATE);
+
+  const hanldleReset = () => { setValues({ ...INITIAL_STATE }) };
+
+  const handleChange= (event) => { 
+    event.preventDefault();
+    setValues({ ...values, [event.target.name] : event.target.value });
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header/>
+        <Input/>
+        <Button/>
     </div>
   );
 }
