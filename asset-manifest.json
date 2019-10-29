@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/LisCT/flatten-array/static/css/main.ca4f6dff.chunk.css",
+    "main.js": "/LisCT/flatten-array/static/js/main.dbb6fb8c.chunk.js",
+    "main.js.map": "/LisCT/flatten-array/static/js/main.dbb6fb8c.chunk.js.map",
+    "runtime-main.js": "/LisCT/flatten-array/static/js/runtime-main.e64c51a8.js",
+    "runtime-main.js.map": "/LisCT/flatten-array/static/js/runtime-main.e64c51a8.js.map",
+    "static/css/2.764ccc25.chunk.css": "/LisCT/flatten-array/static/css/2.764ccc25.chunk.css",
+    "static/js/2.3fb28ed2.chunk.js": "/LisCT/flatten-array/static/js/2.3fb28ed2.chunk.js",
+    "static/js/2.3fb28ed2.chunk.js.map": "/LisCT/flatten-array/static/js/2.3fb28ed2.chunk.js.map",
+    "index.html": "/LisCT/flatten-array/index.html",
+    "precache-manifest.5b8c672541e4bab7dadb516f9615b039.js": "/LisCT/flatten-array/precache-manifest.5b8c672541e4bab7dadb516f9615b039.js",
+    "service-worker.js": "/LisCT/flatten-array/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/LisCT/flatten-array/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.ca4f6dff.chunk.css.map": "/LisCT/flatten-array/static/css/main.ca4f6dff.chunk.css.map",
+    "static/media/logo.svg": "/LisCT/flatten-array/static/media/logo.cb6a0a0e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e64c51a8.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.3fb28ed2.chunk.js",
+    "static/css/main.ca4f6dff.chunk.css",
+    "static/js/main.dbb6fb8c.chunk.js"
+  ]
+}
