@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Input = ({ handleChange, value, name }) => (
-    <div>
+    <div className="form__content">
         <input 
             type="text"
             onChange={handleChange}

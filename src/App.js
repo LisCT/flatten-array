@@ -2,6 +2,7 @@ import  React, {useState} from 'react';
 import Header from './components/Header';
 import Input from './components/Input';
 import Button from './components/Button';
+import Result from './components/Result';
 import './App.css';
 
 function App() {
@@ -18,33 +19,47 @@ function App() {
   const handleChange= (event) => {
     setValues({...values, [event.target.name]: event.target.value })
   }
-  
+
   const convertArray = (array) => {
     return JSON.parse(array);
   }
 
   const hadleSubmit = (event) => {
     event.preventDefault(); 
-    const result = String(convertArray(values.input)).split(',').map(num =>  num * 1);
-    setValues({ ...values, result });
+
+    if(values.input !== ''){
+      const result = String(convertArray(values.input)).split(',').map(num => num * 1);
+      setValues({ ...values, result });
+    }
   }
 
+  const solution = `String(convertArray(value)).split(',').map(num => num * 1)`;
+
   return (
-    <div className="App">
+    <div className="main">
         <Header/>
         <Input 
           handleChange={ handleChange }
           value={ values.input }
+          clas="btn__primary"
           name="input"
         />
         <Button
           copy="Generate"
+          clas="btn__primary"
           handleSubmit ={ hadleSubmit } 
+          disabled={values.input}
         />
         <Button
         copy="Reset"
+        clas="btn__secondary"
         handleSubmit ={ hanldleReset } 
+        disabled={values.input}
       />
+
+      {/* display result on Generate */}
+      { values.result && <Result value={`[${values.result.join(',')}]`} solution={solution}/> } 
+
     </div>
   );
 }

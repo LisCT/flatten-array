@@ -1,22 +1,140 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+/* html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+:root{
+    --dark: #383f44;
+    --blue: #51ace0;
+    --blue-d: #487a96;
+    --white: white;
+    --gray-l: #d3d3d3;
+    --gray-m: #e6e6e6;
+    --gray-d: #939393;
+    --green: #55bd4f;
+    --disabled: #4c5f6d;
 }
 
-.App-logo {
-  height: 40vmin;
+html {
+  font-size: 62.5%;
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    color: var(--dark);
 }
 
-.App-link {
-  color: #09d3ac;
+h1, h2{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+}
+
+h1{ font-size: 2.2em; }
+
+h2{ 
+    font-size: 1.8em; 
+    text-decoration: underline;
+}
+
+input, input:focus, button, button:focus{
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: 0!important;
+    -webkit-appearance: none;
+    -webkit-transition: all .4s ease-in-out; /* Safari prior 6.1 */
+    transition: all .4s ease-in-out;
+}
+
+input, button, .container__solution{ border-radius: 4px; }
+
+input{
+    background-color: var(--white);
+    border: 1px solid var(--gray-l);
+    box-sizing: border-box;
+    color: var(--dark);
+    margin: .6rem 0;
+    padding: 1rem;
+    width: 100%;
+    font-size: .9em;
+    text-align: center;
+    color: var(--gray-d);
+}
+
+input:focus{
+    border-color: var(--blue);
+}
+
+button:disabled, button[disabled] {
+    background-color: var(--disabled);
+    color: white;
+    pointer-events: none;
+}
+
+button:disabled.btn__secondary{ opacity: 0.3 }
+
+.form__content{ width: 100% }
+
+.btn{
+    color: var(--white);
+    background-color: var(--blue);
+    border: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    letter-spacing: .05rem;
+    padding: 1rem 0;
+    width: 100%;
+    margin: .6rem 0;
+}
+
+.btn__primary:hover{ background-color: var(--blue-d) }
+
+.btn__secondary{ 
+    background-color: var(--disabled);
+    color: var(--gray-l);
+    opacity: 0.3; 
+}
+
+.btn__secondary:hover{ opacity: 1; }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7em;
+    text-align: center;
+    max-width: 728px;
+    margin: auto;
+}
+
+.container__solution{
+    background: #f8f8f8;
+    padding: 30px 40px;
+    position: relative;
+}
+
+.container{ padding: 3em }
+
+.result{
+    color: var(--green);
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+.container__solution::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--gray-m);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top:0;
 }
