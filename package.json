@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://github.com/flatten-array",
   "dependencies": {
+    "flatten-array": "^1.0.0",
     "gh-pages": "^2.1.1",
     "normalize.css": "^8.0.1",
     "react": "^16.11.0",
