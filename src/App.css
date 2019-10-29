@@ -94,6 +94,9 @@ a {
 
 a:hover{ color: var(--blue-d )}
 
+.App-logo { height: 10vmin }
+
+  
 .form__content{ width: 100% }
 
 .btn{
