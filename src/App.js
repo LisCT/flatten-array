@@ -6,7 +6,6 @@ import Result from './components/Result';
 import Footer from './components/Footer';
 import './App.css';
 
-
 export const convertArray = (array) => {
   return JSON.parse(array);
 }
