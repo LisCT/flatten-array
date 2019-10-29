@@ -17,7 +17,7 @@ const Result =({value, solution, explain}) => {
                 </div>
             </div>
             
-            <p className="path-line">See this code in the following path: src/App.js > <a href="https://github.com/LisCT/flatten-array/blob/master/src/App.js" target="_blank" rel="noopener noreferrer">line 13</a></p>
+            <p className="path-line">See this code in the following path: src/App.js > <a href="https://github.com/LisCT/flatten-array/blob/master/src/App.js" target="_blank" rel="noopener noreferrer">line 23</a></p>
 
         </div>
     )
