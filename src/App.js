@@ -6,6 +6,15 @@ import Result from './components/Result';
 import Footer from './components/Footer';
 import './App.css';
 
+
+export const convertArray = (array) => {
+  return JSON.parse(array);
+}
+
+export const convertToFlatArray = (value) => {
+  return String(value).split(',').map(num => num * 1);
+}
+
 function App() {
 
   const INITIAL_STATE = { 
@@ -21,20 +30,22 @@ function App() {
     setValues({...values, [event.target.name]: event.target.value })
   }
 
-  const convertArray = (array) => {
-    return JSON.parse(array);
-  }
-
   const hadleSubmit = (event) => {
     event.preventDefault(); 
+    const value = values.input;
 
-    if(values.input !== ''){
-      const result = String(convertArray(values.input)).split(',').map(num => num * 1);
+    if(value !== ''){
+      const array = convertArray(value); 
+      const result = convertToFlatArray(array);
       setValues({ ...values, result });
     }
   }
 
-  const solution = `String(convertArray(value)).split(',').map(num => num * 1)`;
+  const solution = `
+    export const convertToFlatArray = (value) => {
+      return String(value).split(',').map(num => num * 1);
+    }
+  `;
 
   return (
     <div className="main">

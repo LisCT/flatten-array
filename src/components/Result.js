@@ -20,7 +20,7 @@ const Result =({value, solution, explain}) => {
             </div>
             
             
-            <p className="path-line">See this code in the following path: src/App.js > line 32</p>
+            <p className="path-line">See this code in the following path: src/App.js > line 14</p>
 
         </div>
     )

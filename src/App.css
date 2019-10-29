@@ -132,6 +132,7 @@ a:hover{ color: var(--blue-d )}
     background: #f8f8f8;
     padding: 30px 40px;
     position: relative;
+    text-align: left;
 }
 
 .container{ padding: 1em }
