@@ -12,14 +12,12 @@ const Result =({value, solution, explain}) => {
             <div className="container__solution">
                 <pre><code className="code">{ solution }</code></pre>
                 <div className="container__explain">
-                    <p><strong>The input value</strong> is converted into an array,
-                    then into a string which eliminate all the brackets.</p>
-                    <p><strong>Split</strong> separate them by a comma which is the main separator, It's going to return an array of strings.</p>
-                    <p><strong>Map</strong> is going to convert each string into a number and will return an array.</p>
+                    <p><strong>Flat</strong> method creates a new array of flat elements. This method accepts a specific depth value,  by default 1.</p>
+                    <p><strong>For the depth level</strong> the value is <strong>Infinity,</strong> specifying that all nested arrays should be flattened.</p>
                 </div>
             </div>
             
-            <p className="path-line">See this code in the following path: src/App.js > <a href="https://github.com/LisCT/flatten-array/blob/master/src/App.js" target="_blank" rel="noopener noreferrer">line 14</a></p>
+            <p className="path-line">See this code in the following path: src/App.js > <a href="https://github.com/LisCT/flatten-array/blob/master/src/App.js" target="_blank" rel="noopener noreferrer">line 13</a></p>
 
         </div>
     )

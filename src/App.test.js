@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { convertToFlatArray, convertArray } from './App';
+import { convertToFlatArray, convertToArray } from './App';
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -18,12 +20,12 @@ describe('Flat Functions', () => {
 
   it('convert into an array correctly', () => {
     const mock = '[[1,2,[3]],4]';
-    expect(convertArray(mock)).toEqual([[1,2,[3]],4]);
+    expect(convertToArray(mock)).toEqual([[1,2,[3]],4]);
   });
 
   it('combining functions flat + convertArray correctly', () => {
     const mock = '[[1,2,[3]],4]';
-    const array = convertArray(mock);
+    const array = convertToArray(mock);
     expect(convertToFlatArray(array)).toEqual([1,2,3,4]);
   });
 

@@ -6,23 +6,25 @@ import Result from './components/Result';
 import Footer from './components/Footer';
 import './App.css';
 
-export const convertArray = (array) => {
+export const convertToArray = (array) => {
   return JSON.parse(array);
 }
 
 export const convertToFlatArray = (value) => {
-  return String(value).split(',').map(num => num * 1);
+  return value.flat(Infinity); 
 }
+
 
 function App() {
 
   const INITIAL_STATE = { 
       input : '', 
-      result: '' 
+      result: '',
+      error: '' 
   };
 
   const [values, setValues] = useState(INITIAL_STATE);
-
+  
   const hanldleReset = () => { setValues({ ...INITIAL_STATE }) };
 
   const handleChange= (event) => {
@@ -34,15 +36,19 @@ function App() {
     const value = values.input;
 
     if(value !== ''){
-      const array = convertArray(value); 
-      const result = convertToFlatArray(array);
-      setValues({ ...values, result });
+      try{
+        const array = convertToArray(value); 
+        const result = convertToFlatArray(array);
+        setValues({ ...values, result, error: '' });
+      }catch(e){
+        setValues({ ...values, error: "Invalid value, please enter an array." });
+      }
     }
   }
 
   const solution = `
     export const convertToFlatArray = (value) => {
-      return String(value).split(',').map(num => num * 1);
+      return value.flat(Infinity)
     }
   `;
 
@@ -68,8 +74,11 @@ function App() {
         disabled={values.input}
       />
 
+      {/* Error */}
+      {values.error && <p>{values.error}</p>}
+
       {/* display result on Generate */}
-      { values.result && values.input && <Result value={`[${values.result.join(',')}]`} solution={solution}/> } 
+      {values.result && values.input && !values.error && <Result value={`[${values.result.join(',')}]`} solution={solution}/> } 
       
       <Footer/>
 
