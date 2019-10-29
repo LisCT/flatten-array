@@ -2,27 +2,35 @@
 
 This app will flatten an array of arbitrarily nested arrays of integers into a flat array of integers.
 
-http://fatarray.surge.sh/
+https://github.com/flatten-array
 
 ## Available Scripts
 
 The project is using React.
 In the project directory, you can run:
 
-### `yarn Install`
+```bash
+yarn install
+```
 
 Installs all dependencies necessaries.
 
-### `yarn start`
+```bash
+yarn start
+```
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `yarn test`
+```bash
+yarn test
+```
 
 Launches the test runner in the interactive watch mode.
 
-### `yarn build`
+```bash
+yarn build
+```
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
