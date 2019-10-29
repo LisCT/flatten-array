@@ -4,16 +4,25 @@ import Input from './components/Input';
 import Button from './components/Button';
 import Result from './components/Result';
 import Footer from './components/Footer';
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
 import './App.css';
 
-export const convertToArray = (array) => {
-  return JSON.parse(array);
+// Convert input value into an array
+export const convertToArray = (value) => {
+  try{ return JSON.parse(value); }
+  catch(e){ return false }
 }
 
-export const convertToFlatArray = (value) => {
-  return value.flat(Infinity); 
+// Validated that the array is an array of integers
+export const validateIntegerArray = (array) => {
+  return array.every((num) => Number.isInteger(num) ? true : false);
 }
 
+// Converts an array into a flat array
+export const convertToFlatArray = (array) => {
+  return array.flat(Infinity);
+}
 
 function App() {
 
@@ -36,12 +45,19 @@ function App() {
     const value = values.input;
 
     if(value !== ''){
-      try{
-        const array = convertToArray(value); 
+      const array = convertToArray(value) ; 
+
+      if(array) {
         const result = convertToFlatArray(array);
-        setValues({ ...values, result, error: '' });
-      }catch(e){
-        setValues({ ...values, error: "Invalid value, please enter an array." });
+
+        if(validateIntegerArray(result)){
+          setValues({ ...values, result, error: '' });
+        }else{
+          setValues({ ...values, error: "The value must be an array of integers." });
+        }
+
+      }else{
+        setValues({ ...values, error: "The value must be a valid array." });
       }
     }
   }
@@ -78,7 +94,7 @@ function App() {
       {values.error && <p>{values.error}</p>}
 
       {/* display result on Generate */}
-      {values.result && values.input && !values.error && <Result value={`[${values.result.join(',')}]`} solution={solution}/> } 
+      {values.result && values.input && !values.error && <Result value={`[${values.result}]`} solution={solution}/> } 
       
       <Footer/>
 
