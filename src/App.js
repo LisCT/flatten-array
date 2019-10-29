@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Input from './components/Input';
 import Button from './components/Button';
 import Result from './components/Result';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -58,7 +59,9 @@ function App() {
       />
 
       {/* display result on Generate */}
-      { values.result && <Result value={`[${values.result.join(',')}]`} solution={solution}/> } 
+      { values.result && values.input && <Result value={`[${values.result.join(',')}]`} solution={solution}/> } 
+      
+      <Footer/>
 
     </div>
   );

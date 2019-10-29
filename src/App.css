@@ -78,6 +78,22 @@ button:disabled, button[disabled] {
 
 button:disabled.btn__secondary{ opacity: 0.3 }
 
+footer{
+    font-weight: 400;
+    font-size: 0.8em;
+    padding: 1em;
+    color: var(--gray-d);
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+    -webkit-transition: all .4s ease-in-out; /* Safari prior 6.1 */
+    transition: all .4s ease-in-out;
+}
+
+a:hover{ color: var(--blue-d )}
+
 .form__content{ width: 100% }
 
 .btn{
@@ -118,7 +134,7 @@ button:disabled.btn__secondary{ opacity: 0.3 }
     position: relative;
 }
 
-.container{ padding: 3em }
+.container{ padding: 1em }
 
 .result{
     color: var(--green);
@@ -137,4 +153,11 @@ button:disabled.btn__secondary{ opacity: 0.3 }
     left: 0;
     right: 0;
     top:0;
+}
+
+.container__explain{
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin-top: 2em;
 }
