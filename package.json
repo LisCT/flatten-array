@@ -5,6 +5,7 @@
   "homepage": "https://github.com/flatten-array",
   "dependencies": {
     "gh-pages": "^2.1.1",
+    "node-sass": "^4.13.0",
     "normalize.css": "^8.0.1",
     "react": "^16.11.0",
     "react-app-polyfill": "^1.0.4",
