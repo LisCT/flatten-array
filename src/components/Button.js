@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Input = () => (
+const Input = ({ copy = "click me", handleSubmit }) => (
     <div>
-        <button>Generate</button>
+        <button
+            onClick={handleSubmit}
+        >
+        {copy}
+        </button>
     </div>
 )
 
