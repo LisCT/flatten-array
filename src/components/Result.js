@@ -6,11 +6,11 @@ const Result =({value, solution, explain}) => {
             <h2>Solution</h2>
 
             <div className="result">
-                <pre><code> {value} </code></pre>
+                <p><code> {value} </code></p>
             </div>
 
             <div className="container__solution">
-                <pre><code className="code">{ solution }</code></pre>
+                <p><code className="code">{ solution }</code></p>
                 <div className="container__explain">
                     <p><strong>Flat</strong> method creates a new array of flat elements. This method accepts a specific depth value,  by default 1.</p>
                     <p><strong>For the depth level</strong> the value is <strong>Infinity,</strong> specifying that all nested arrays should be flattened.</p>

@@ -125,7 +125,7 @@ a:hover{ color: var(--blue-d )}
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7em;
+    padding: 1em;
     text-align: center;
     max-width: 728px;
     margin: auto;
@@ -133,7 +133,7 @@ a:hover{ color: var(--blue-d )}
 
 .container__solution{
     background: #f8f8f8;
-    padding: 30px 40px;
+    padding: 1.4em;
     position: relative;
     text-align: left;
 }
